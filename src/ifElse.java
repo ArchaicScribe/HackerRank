@@ -9,22 +9,33 @@ import java.util.regex.*;
 
 public class ifElse {
 	   private static final Scanner scanner = new Scanner(System.in);
-
 	    public static void main(String[] args) {
-	        int N = scanner.nextInt();
-	        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");{
 
-	          scanner.close();
-	        if(N % 2==1 || N % 2 ==0 && 6 > N && N < 20) {
-	        	System.out.println("Wierid"); 
-	        }else if(N >= 2 && N <= 5 || N > 20){
-	        		System.out.println("Not Weird");
-	        	}
-	        	}
-	    {
-	    
+	        Scanner sc=new Scanner(System.in);
+	        int n=sc.nextInt();            
+	        String ans="";
+
+	        if(n>=1 && n<=100){
+	            if(n%2==1){
+	                ans = "Weird";
+	            }
+	            else{
+	                if(n>=2 && n<=5 ){
+	                   ans= "Not Weird";
+	                }
+	                else if (n>=6 && n<=20){
+	                    ans = "Weird";
+	                }
+	                else if(n>20) {
+	                    ans = "Not Weird";
+	                }
+	            }
 	        }
-	    
-}    
-	    }
+	        else{
+	            ans="Invalid no! Enter a number between 1 and 100.";
+	        }
 
+	        System.out.println(ans);
+
+	    }
+	}
